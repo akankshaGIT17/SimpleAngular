@@ -1,0 +1,53 @@
+<script src="js/jquery.min.js" ></script>
+<script src="js/angular.min.js" ></script>
+<script src="js/angular-route.min.js" ></script>
+<script src="js/angular-animate.min.js"></script>
+<link rel="stylesheet" type="text/css" href="scripts/progress.css">
+<script src="scripts/app.js"></script>
+<script src="scripts/achievements-controller.js"></script>
+<script src="scripts/education-controller.js"></script>
+<script src="scripts/achievements-controller.js"></script>
+
+<html ng-app="myApp">
+<body>
+    <div id="navigation">
+    <ul>
+        <li><a href="#">Profile</a></li>
+        <li><a href="#">Career</a></li>
+        <li><a href="#">Assessment</a></li>
+        <li><a href="#">Resources</a></li>
+        <li><a href="#">Tracking</a></li>
+        
+    </ul>
+</div>
+    <ol class="progress" data-steps="4">
+    <li class="done">
+        <span class="name">Experience</span>
+        <span class="step"><span>1</span></span>
+    </li>
+    <li class="active">
+        <span class="name">Education</span>
+        <a href="#/education" style="text-decoration: none" class="step"><span>2</span></a>
+    </li>
+    <li >
+        <span class="name">Skills &amp; achievements</span>
+        <a href="#/achievements" style="text-decoration: none" class="step"><span>3</span></a>
+    </li>
+    <li>
+        <span class="name">Personal Info</span>
+        <span class="step"><span>4</span></span>
+    </li>
+        <li>
+        <span class="name">Preferences</span>
+        <span class="step"><span>5</span></span>
+    </li>
+</ol>
+    <div id="educationDiv"  class="box" ng-view>
+   
+       
+         <span style="text-align:left">     Click to add other details.</span>
+</div>
+    
+
+</body>
+</html>

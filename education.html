@@ -1,0 +1,74 @@
+<!--<ol class="progress" data-steps="4">
+    <li class="done">
+        <span class="name">Experience</span>
+        <span class="step"><span>1</span></span>
+    </li>
+    <li class="active">
+        <span class="name">Education</span>
+        <span class="step"><span>2</span></span>
+    </li>
+    <li >
+        <span class="name">Skills &amp; achievements</span>
+        <span class="step"><span>3</span></span>
+    </li>
+    <li>
+        <span class="name">Personal Info</span>
+        <span class="step"><span>4</span></span>
+    </li>
+        <li>
+        <span class="name">Preferences</span>
+        <span class="step"><span>5</span></span>
+    </li>
+</ol> -->
+
+<table id="eduTable" style="border-spacing: 50px 20px; ">
+            
+        <form  name="educationForm" ng-controller="eduController" ng-submit="login()" novalidate >
+            <thead><h3>Education</h3></thead>
+            <span style="text-align:left"><h6>HIGHEST EDUCATION</h6></span>
+            <tr>
+                <td> <label >Institute: </label></td>
+                <td><input type="text"name="institute" id="institute" ng-model="institute" required /> <span ng-show="(educationForm.institute.$touched && educationForm.institute.$invalid)">The Institute is required.</span></td>
+            </tr>
+            
+            
+            <tr>
+                <td><label value="Qualification"> Qualification:</label></td>
+                <td><input type="text"name="qualification" id="qualification" ng-model="qualification" ng-required="true"/><span ng-show="(educationForm.qualification.$touched && educationForm.qualification.$invalid)">The Institute is required.</span></td>
+            </tr>
+            <tr>
+                <td><label value="Course">Course :</label></td>
+                <td><input type="text"name="course" id="course" ng-model="course" ng-required="true"/><span ng-show="(educationForm.course.$touched && educationForm.course.$invalid)">The Institute is required.</span></td>
+            </tr>
+            <tr>
+                <td><label value="Batch"> Batch:</label></td>
+                <td><input type="text"name="batch" id="batch" ng-model="batch" ng-required="true" ng-pattern="phoneNumberPattern" />
+                    <span ng-show="(educationForm.batch.$touched && educationForm.batch.$invalid)">The Institute is required.</span>
+                </td>
+                
+                
+            </tr>
+            <tr><td><input type="button" ng-click="addNewChoice()" value="Add skills"></input></td>
+            <td>
+                </td><td></td></tr>
+<tr><td></td>
+            <td>
+                <div data-ng-repeat="field in choiceSet.choices track by $index">
+
+
+        <input type="text" ng-model=" choiceSet.choices[$index]"></input>
+        <button type="button"  ng-click="removeChoice($index)">
+          <span ></span> REMOVE
+        </button>
+
+      </div>
+                </td><td></td></tr>
+
+        </form>
+        </table>
+<div id="msg">
+<span style="color:red">{{message}}</span>
+<div id="submit">
+<span style="align:center;"><a href="#" class="button" ng-disabled="educationForm.$invalid">Submit</a></span>
+</div>
+   

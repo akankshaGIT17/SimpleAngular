@@ -1,0 +1,170 @@
+
+ol.progress[data-steps="2"] li { width: 20%; }
+ol.progress[data-steps="3"] li { width: 20%; }
+ol.progress[data-steps="4"] li { width: 20%; }
+ol.progress[data-steps="5"] li { width: 20%; }
+ol.progress[data-steps="6"] li { width: 20%; }
+ol.progress[data-steps="7"] li { width: 20%; }
+ol.progress[data-steps="8"] li { width: 20%; }
+ol.progress[data-steps="9"] li { width: 20%; }
+
+.progress {
+    width: 100%;
+    list-style: none;
+    list-style-image: none;
+    margin: 20px;
+    padding: 30px;
+    text-align: center;
+    right: 10%;
+    
+}
+
+.progress li {
+    float: left;
+    text-align: center;
+    position: relative;
+    
+}
+
+.progress .name {
+    display: block;
+    vertical-align: bottom;
+    text-align: center;
+    margin-bottom: 1em;
+    color: black;
+    opacity: 0.3;
+}
+
+.progress .step {
+    color: black;
+    border: 3px solid silver;
+    background-color: silver;
+    border-radius: 50%;
+    line-height: 1.2;
+    width: 1.2em;
+    height: 1.2em;
+    display: inline-block;
+    z-index: 0;
+}
+
+.progress .step span {
+    opacity: 0.3;
+}
+
+.progress .active .name,
+.progress .active .step span {
+    opacity: 1;
+}
+
+.progress .step:before {
+    content: "";
+    display: block;
+    background-color: silver;
+    height: 0.4em;
+    width: 50%;
+    position: absolute;
+    bottom: 0.6em;
+    left: 0;
+    z-index: -1;
+}
+
+.progress .step:after {
+    content: "";
+    display: block;
+    background-color: silver;
+    height: 0.4em;
+    width: 50%;
+    position: absolute;
+    bottom: 0.6em;
+    right: 0;
+    z-index: -1;
+}
+
+.progress li:first-of-type .step:before {
+    display: none;
+}
+
+.progress li:last-of-type .step:after {
+    display: none;
+}
+
+.progress .done .step,
+.progress .done .step:before,
+.progress .done .step:after,
+.progress .active .step,
+.progress .active .step:before {
+    background-color: yellowgreen;
+}
+
+.progress .done .step,
+.progress .active .step {
+    border: 3px solid yellowgreen;
+}
+    #navigation ul
+{
+    margin: 10px;
+    padding: 10px;
+    background-color: #fff9e6;
+    width:100%;
+    text-align: center;
+    font-size: 20px
+}
+
+#navigation ul li
+{
+    list-style-type: none;
+    display: inline;
+}
+
+#navigation li:not(:first-child):before {
+    content: " | ";
+  
+}
+.box{
+width:500px;
+    position: absolute;
+    align-items: center;
+    border:1px solid white;
+    padding:10px;
+    margin: 50px 350px ;
+    text-align: center;
+            
+}
+    input.ng-invalid.ng-touched ,.msg{
+        border: 1px solid #BA3637;
+         content:"hello";
+    }
+    input.ng-valid.ng-touched{
+        border: 1px solid green
+    }
+    body {
+  text-align: center;
+         width: 80%;
+  margin: 50px auto;
+ }
+
+#page-wrap {
+  text-align: left;
+ 
+}
+     footer {
+    background: silver;
+    line-height: 8;
+         width:100%;
+    
+    color: #042E64;
+    
+    
+}
+    .button {
+    background-color: lightgrey;
+    border: none;
+    color: black;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 10px 12px;
+    cursor: pointer;
+}
